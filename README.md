@@ -1,1 +1,1 @@
-Nom du binome: Rihab ARFAOUI et Saif BAHRI
+Nom du binôme: Rihab ARFAOUI et Saif BAHRI
