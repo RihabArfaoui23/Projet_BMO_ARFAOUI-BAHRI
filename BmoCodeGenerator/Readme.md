@@ -1,4 +1,4 @@
-Ce générateur de code lit un l'input file nommé input.txt situé dans le projet java actuel ( ce fichier contient la description textuelle de notre diagramme de classe)
+Ce générateur de code lit l'input file nommé input.txt situé dans le projet java actuel ( ce fichier contient la description textuelle de notre diagramme de classe)
 NB:les classes Pari simple , Pari Avance , Bookmaker , et Parieur n'ont pas d'ID parcequ'on ils vont l'hériter de leurs parents Utilisateur et Paris 
 Il suffit de tourner ce projet java dans éclipse et tous les fichiers des classes vont etre générés automatiquement dans la racine du projet 
 Chaque fichier contient la définition du classe avec toutes les importations nécessaires , ses attributs et meme la déclaration de ces méthodes.On a meme travaillé à 
