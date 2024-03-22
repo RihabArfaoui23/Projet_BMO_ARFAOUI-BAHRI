@@ -11,8 +11,9 @@ Conception du diagramme de classes
 
 |
 ↓
-Semaine 2 : 
 
+
+Semaine 2 : 
 Conception du diagramme d'objets 
 Conception des diagrammes de séquences
 Conception du diagramme d'état 
