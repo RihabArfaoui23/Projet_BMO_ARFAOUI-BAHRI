@@ -1,0 +1,86 @@
+ClassDiagram [frame=true framecolor=steelblue label="Diagramme de Classe"] {
+
+    abstract class Utilisateur {
+        private userId : Int
+        private email : String
+        private password : String
+        public login(email: String, password: String)
+    }
+    
+    class Parieur {
+        private capitalInitial: Float 
+        private jetons: Float
+        public rechargerJetons(montant: Float): void
+    }
+    
+    class Bookmaker {
+        public determinerCotes(): void
+        public determinerEcartsScores(): void
+        public limiterMontantMax(): void
+        public plafonnerGains(): void
+    }
+    
+    class Paris {
+        private idParis: Int
+        private typeParis: String
+        private montantParie: Float
+        private resultatAttendu: String
+        private cote: Float
+        public placerParis(): void
+        public calculerGain(): Float
+        public consulterResultat(): String
+    }
+      class PariSimple {
+        private typePari: String
+        private montantMise: Float
+        private resultatAttendu: String
+        private cote: Float
+    }
+    
+    class PariAvance {
+        private typePari: String
+        private montantMise: Float
+        private resultatAttendu: String
+        private cote: Float
+        private detailsSupplementaires: String
+    }
+    
+    class EvenementSportif {
+        private idEvenement: Int
+        private typeEvenement: String
+        private sport: Sport
+        private dateDebut: Date
+        private dateFin: Date
+        public consulterEvenementSportif(): String
+    }
+  
+  class Sport {
+        private sportId: Int
+        private nom: String
+        private regles: String
+    }
+
+    align {
+        Utilisateur
+        Parieur
+    }
+  
+    align {
+        Parieur
+        Paris
+    }
+  
+    align {
+        Bookmaker
+        EvenementSportif
+    }
+  
+    PariSimple -g-> Paris
+    PariAvance -g-> Paris
+    Parieur -g-> Utilisateur
+    Bookmaker -g-> Utilisateur
+    Parieur "1" -- "0..*" Paris : "place";
+    Bookmaker "1..*" -- "0.*" EvenementSportif :"gére";
+    EvenementSportif "1" -- "0..*" Sport : "assosié à";
+
+}
